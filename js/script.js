@@ -46,7 +46,7 @@ function addProduct() {
   txtCode.value = "";
   txtProduct.value = "";
   txtPrice.value = "";
-  /*$("#staticBackdrop").modal("hide");*/
+  $("#staticBackdrop").modal("hide");
   fillTable();
 }
 

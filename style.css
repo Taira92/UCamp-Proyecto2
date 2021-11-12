@@ -3,6 +3,37 @@
     padding: 0;
 }
 
+header{
+    padding: 2em;
+    vertical-align: middle;
+    background-color: #7952b3;
+}
+
+#logo{
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+header h1{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    text-align: right;
+    color: white;
+}
+
+#btnAdd{
+    margin: 2em 0;
+    float: right;
+}
+
+.container h2{
+    text-align: center;
+}
+
 .form-label, .form-input{
     display: block;
 }
