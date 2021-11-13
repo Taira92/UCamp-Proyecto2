@@ -23,31 +23,42 @@ class Product {
 }
 
 function addProduct() {
-  if (xAction == 0) {
-    const objProduct = new Product(
-      id,
-      document.getElementById("txtCode").value,
-      document.getElementById("txtProduct").value,
-      document.getElementById("txtPrice").value
-    );
-    localStorage.setItem(id, JSON.stringify(objProduct));
-    id++;
+  if (document.getElementById("txtCode").value == "") {
+    alert("Debe ingresar el campo codigo!");
+    document.getElementById("txtCode").focus();
+  } else if (document.getElementById("txtProduct").value == "") {
+    alert("Debe ingresar el campo producto!");
+    document.getElementById("txtProduct").focus();
+  } else if (document.getElementById("txtPrice").value == "") {
+    alert("Debe ingresar el campo precio!");
+    document.getElementById("txtPrice").focus();
   } else {
-    const objProduct = new Product(
-      xAction,
-      document.getElementById("txtCode").value,
-      document.getElementById("txtProduct").value,
-      document.getElementById("txtPrice").value
-    );
-    localStorage.setItem(xAction, JSON.stringify(objProduct));
-    xAction = 0;
-  }
+    if (xAction == 0) {
+      const objProduct = new Product(
+        id,
+        document.getElementById("txtCode").value,
+        document.getElementById("txtProduct").value,
+        document.getElementById("txtPrice").value
+      );
+      localStorage.setItem(id, JSON.stringify(objProduct));
+      id++;
+    } else {
+      const objProduct = new Product(
+        xAction,
+        document.getElementById("txtCode").value,
+        document.getElementById("txtProduct").value,
+        document.getElementById("txtPrice").value
+      );
+      localStorage.setItem(xAction, JSON.stringify(objProduct));
+      xAction = 0;
+    }
 
-  txtCode.value = "";
-  txtProduct.value = "";
-  txtPrice.value = "";
-  $("#staticBackdrop").modal("hide");
-  fillTable();
+    txtCode.value = "";
+    txtProduct.value = "";
+    txtPrice.value = "";
+    $("#staticBackdrop").modal("hide");
+    fillTable();
+  }
 }
 
 function fillTable() {
