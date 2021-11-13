@@ -11,7 +11,7 @@ if (localStorage.length > 0) {
 
   for (let index = 0; index < arrayNumber.length; index++) {
     if (parseInt(arrayNumber[index]) > id) {
-      id = parseInt(arrayNumber[index]) +1;
+      id = parseInt(arrayNumber[index]) + 1;
     }
   }
   fillTable();
@@ -147,6 +147,10 @@ function getDataById(id) {
 
 function deleteProduct(id) {
   localStorage.removeItem(id);
+  if (localStorage.length == 0) {
+    id = 1;
+  }
+
   fillTable();
 }
 
