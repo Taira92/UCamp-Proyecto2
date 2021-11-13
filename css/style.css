@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+header {
+  padding: 2em;
+  vertical-align: middle;
+  background-color: #7952b3;
+}
+
+#logo {
+  width: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 10px;
+  margin-right: 2em;
+}
+
+header h1 {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  color: white;
+}
+
+#btnAdd {
+  float: right;
+}
+
+.container {
+  padding: 2em;
+}
+
+.container h2 {
+  text-align: center;
+}
+
+.form-label,
+.form-input {
+  display: block;
+}
+.form-label {
+  margin-top: 0.5em;
+}
+
+.form-input {
+  width: 100%;
+}
+
+.button-table {
+  margin-left: 1em;
+  margin-top: 0.3em;
+}
+
+footer {
+  background-color: rgba(229, 231, 235);
+  padding: 2em;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 770px) {
+  header h1 {
+    font-size: 15px;
+  }
+  .container {
+    padding: 1em 0;
+  }
+
+  #tbProducts {
+    font-size: 12px;
+  }
+
+  .button-table {
+    margin-left: 1em;
+    margin-top: 0.3em;
+    font-size: 12px;
+  }
+
+  #logo {
+    width: 30px;
+  }
+}
+
+@media (max-width: 570px) {
+  #logo {
+    display: none;
+  }
+
+  footer {
+    position: inherit;
+  }
+}
+
+@media (max-width: 475px) {
+}
