@@ -1,8 +1,19 @@
 window.xAction = 0;
-var id;
+var id = 0;
+
+var arrayStorage = [];
 
 if (localStorage.length > 0) {
-  id = 100;
+  for (const key in localStorage) {
+    arrayStorage.push(key);
+  }
+  const arrayNumber = arrayStorage.filter(Number);
+
+  for (let index = 0; index < arrayNumber.length; index++) {
+    if (parseInt(arrayNumber[index]) > id) {
+      id = parseInt(arrayNumber[index]) +1;
+    }
+  }
   fillTable();
 } else {
   id = 1;
@@ -50,12 +61,9 @@ function addProduct() {
         document.getElementById("txtPrice").value
       );
       localStorage.setItem(xAction, JSON.stringify(objProduct));
-      xAction = 0;
     }
 
-    txtCode.value = "";
-    txtProduct.value = "";
-    txtPrice.value = "";
+    clearData();
     $("#staticBackdrop").modal("hide");
     fillTable();
   }
@@ -145,4 +153,11 @@ function deleteProduct(id) {
 
 function setAction(id) {
   xAction = id;
+}
+
+function clearData() {
+  xAction = 0;
+  txtCode.value = "";
+  txtProduct.value = "";
+  txtPrice.value = "";
 }
