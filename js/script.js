@@ -100,14 +100,13 @@ function fillTable() {
       var row = document.createElement("tr");
 
       //CREAMOS LA CELDA
-      var tdId = document.createElement("td");
+      //var tdId = document.createElement("td");
       var tdCode = document.createElement("td");
       var tdName = document.createElement("td");
       var tdPrice = document.createElement("td");
-      var tdButton = document.createElement("td");
 
       //CREAMOS EL TEXTO DE LA CELDA
-      var textId = document.createTextNode(xProduct.id);
+      //var textId = document.createTextNode(xProduct.id);
       var textCode = document.createTextNode(xProduct.code);
       var textName = document.createTextNode(xProduct.name);
       var textPrice = document.createTextNode(xProduct.price);
@@ -115,7 +114,7 @@ function fillTable() {
       var txtbEliminar = document.createTextNode("Eliminar");
 
       //ASIGNAMOS A LA CELDA EL TEXTO
-      tdId.appendChild(textId);
+      //tdId.appendChild(textId);
       tdCode.appendChild(textCode);
       tdName.appendChild(textName);
       tdPrice.appendChild(textPrice);
@@ -123,7 +122,7 @@ function fillTable() {
       bEliminar.appendChild(txtbEliminar);
 
       //ASIGNAMOS A LA FILA LAS CELDAS
-      row.appendChild(tdId);
+      //row.appendChild(tdId);
       row.appendChild(tdCode);
       row.appendChild(tdName);
       row.appendChild(tdPrice);
